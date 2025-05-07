@@ -31,13 +31,13 @@ Installation
 
 .. code:: sh
 
-    pip install -e git+https://github.com/dscss1/pyspapi.git
+    pip install -e git+https://github.com/dscss1/pyspapi.git#egg=pyspapi
 
 *Linux/macOS*
 
 .. code:: sh
 
-    pip3 install -e git+https://github.com/dscss1/pyspapi.git
+    pip3 install -e git+https://github.com/dscss1/pyspapi.git#egg=pyspapi
 
 Quick example
 --------------
