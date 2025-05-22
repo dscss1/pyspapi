@@ -10,8 +10,8 @@ log = getLogger('pyspapi')
 class APISession(object):
     """ Holds aiohttp session for its lifetime and wraps different types of request """
 
-    def __init__(self, card_id: str, token: str, timeout=5, sleep_time=0.2, retries=0):
-        self.__url = "https://spworlds.ru/"
+    def __init__(self, card_id: str, token: str, timeout=5, sleep_time=0.2, retries=0, mirror: bool = False):
+        self.__url = "https://spworlds.org/" if mirror else "https://spworlds.ru/"
         self.__id = card_id
         self.__token = token
         self.__sleep_timeout = sleep_time
