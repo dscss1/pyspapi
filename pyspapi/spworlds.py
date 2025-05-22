@@ -15,7 +15,7 @@ class SPAPI(APISession):
     Представляет собой клиент API для взаимодействия с конкретным сервисом.
     """
 
-    def __init__(self, card_id=None, token=None, timeout=5, sleep_time=0.2, retries=0):
+    def __init__(self, card_id=None, token=None, timeout=5, sleep_time=0.2, retries=0, mirror: bool = false):
         """
         Инициализирует объект SPAPI.
 
@@ -29,8 +29,11 @@ class SPAPI(APISession):
         :type sleep_time: float, optional
         :param retries: Количество повторных попыток для неудачных запросов. По умолчанию 0.
         :type retries: int, optional
+
+        :param mirror: Если True то меняет base uri на зеркало
+        :type mirror: bool, optional
         """
-        super().__init__(card_id, token, timeout, sleep_time, retries)
+        super().__init__(card_id, token, timeout, sleep_time, retries, mirror)
         self.__card_id = card_id
         self.__token = token
 
