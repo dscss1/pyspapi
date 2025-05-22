@@ -15,7 +15,7 @@ class SPAPI(APISession):
     Представляет собой клиент API для взаимодействия с конкретным сервисом.
     """
 
-    def __init__(self, card_id=None, token=None, timeout=5, sleep_time=0.2, retries=0, mirror: bool = false):
+    def __init__(self, card_id=None, token=None, timeout=5, sleep_time=0.2, retries=0, mirror: bool = False):
         """
         Инициализирует объект SPAPI.
 
