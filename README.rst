@@ -59,20 +59,20 @@ Checking the balance
     loop.run_until_complete(main())
 
 Mirror mode
+
 .. code:: py
 
     from pyspapi import SPAPI
     from asyncio import get_event_loop
 
-    # Используем зеркало .org
-    spapi = SPAPI(card_id='CARD_ID', token='TOKEN', mirror=True)
+    spapi = SPAPI(card_id='CARD_ID', token='TOKEN')
+
 
     async def main():
         print(await spapi.balance)
 
     loop = get_event_loop()
     loop.run_until_complete(main())
-
 
 
 More examples can be found in the `examples <https://github.com/deesiigneer/pyspapi/tree/main/examples>`_
